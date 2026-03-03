@@ -1,0 +1,180 @@
+---
+
+---
+
+<section class="services" id="services">
+  <div class="container">
+    <div class="services-header">
+      <span class="section-label">Nos soins</span>
+      <h2 class="section-title">Des soins d'exception,<br />adaptés à vos besoins</h2>
+      <p class="section-subtitle">
+        Chaque séance est personnalisée pour répondre à vos objectifs, que ce soit la récupération sportive, le soulagement de douleurs ou le bien-être général.
+      </p>
+    </div>
+
+    <div class="services-grid">
+      <a href="#contact" class="service-card">
+        <div class="service-image service-image-1">
+          <div class="service-image-overlay"></div>
+        </div>
+        <div class="service-content">
+          <span class="service-number">01</span>
+          <h3>Physiothérapie</h3>
+          <p>Traitement des blessures musculo-squelettiques, rééducation post-opératoire et récupération sportive. Techniques manuelles et exercices ciblés.</p>
+          <span class="service-cta">
+            Réserver
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </span>
+        </div>
+      </a>
+
+      <a href="#contact" class="service-card">
+        <div class="service-image service-image-2">
+          <div class="service-image-overlay"></div>
+        </div>
+        <div class="service-content">
+          <span class="service-number">02</span>
+          <h3>Ostéopathie</h3>
+          <p>Approche globale du corps pour traiter les déséquilibres structurels, les tensions chroniques et les troubles fonctionnels. Manipulations douces et précises.</p>
+          <span class="service-cta">
+            Réserver
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </span>
+        </div>
+      </a>
+
+      <a href="#contact" class="service-card">
+        <div class="service-image service-image-3">
+          <div class="service-image-overlay"></div>
+        </div>
+        <div class="service-content">
+          <span class="service-number">03</span>
+          <h3>Massage sportif</h3>
+          <p>Récupération optimale après le ski ou l'effort. Massage profond pour détendre les muscles, améliorer la circulation et prévenir les blessures.</p>
+          <span class="service-cta">
+            Réserver
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .services {
+    padding: var(--section-padding) 0;
+    background: var(--color-off-white);
+  }
+
+  .services-header {
+    text-align: center;
+    margin-bottom: 80px;
+  }
+
+  .services-header .section-subtitle {
+    margin: 0 auto;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+
+  .service-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--color-white);
+    overflow: hidden;
+    transition: all var(--transition-slow);
+    cursor: pointer;
+  }
+
+  .service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 24px 64px rgba(0, 0, 0, 0.08);
+  }
+
+  .service-image {
+    position: relative;
+    height: 280px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+  }
+
+  /* Placeholder gradients - replace with real images */
+  .service-image-1 {
+    background: linear-gradient(135deg, #1a3a5c, #2c5f8a);
+  }
+  .service-image-2 {
+    background: linear-gradient(135deg, #2c4a3e, #4a7c68);
+  }
+  .service-image-3 {
+    background: linear-gradient(135deg, #3a2c1a, #6a5a3e);
+  }
+
+  .service-image-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.15);
+    transition: background var(--transition-base);
+  }
+
+  .service-card:hover .service-image-overlay {
+    background: rgba(0, 0, 0, 0.05);
+  }
+
+  .service-content {
+    padding: 36px 32px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .service-number {
+    font-family: var(--font-serif);
+    font-size: 0.875rem;
+    color: var(--color-gold);
+    margin-bottom: 12px;
+    display: block;
+  }
+
+  .service-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+  }
+
+  .service-content p {
+    font-size: 0.9375rem;
+    color: var(--color-text-light);
+    line-height: 1.7;
+    flex: 1;
+  }
+
+  .service-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 24px;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-gold);
+    transition: gap var(--transition-base);
+  }
+
+  .service-card:hover .service-cta {
+    gap: 14px;
+  }
+
+  @media (max-width: 960px) {
+    .services-grid {
+      grid-template-columns: 1fr;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+  }
+</style>

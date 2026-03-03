@@ -1,0 +1,70 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Physiothérapie & Ostéopathie premium à domicile dans les chalets de Courchevel. 20 ans d'expérience, service 7j/7." } = Astro.props;
+---
+
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#1A1A2E" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Preconnect for fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:locale:alternate" content="en_GB" />
+
+    <!-- Schema.org LocalBusiness -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "MedicalBusiness",
+      "name": "My French Physio",
+      "description": "Physiothérapie & Ostéopathie à domicile à Courchevel",
+      "url": "https://myfrenchphysio.com",
+      "telephone": "+33600000000",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Courchevel",
+        "addressRegion": "Savoie",
+        "addressCountry": "FR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 45.4154,
+        "longitude": 6.6347
+      },
+      "areaServed": {
+        "@type": "Place",
+        "name": "Courchevel"
+      },
+      "openingHours": "Mo-Su 08:00-20:00",
+      "priceRange": "€€€",
+      "medicalSpecialty": ["Physiotherapy", "Osteopathy"],
+      "availableLanguage": ["French", "English"]
+    })} />
+
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  @import '../styles/global.css';
+</style>

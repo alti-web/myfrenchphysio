@@ -1,0 +1,162 @@
+---
+
+---
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="footer-logo">My French Physio</span>
+        <p class="footer-tagline">Physiothérapie & Ostéopathie premium<br />à domicile à Courchevel</p>
+      </div>
+
+      <div class="footer-nav">
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">À propos</a></li>
+            <li><a href="#testimonials">Témoignages</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#services">Physiothérapie</a></li>
+            <li><a href="#services">Ostéopathie</a></li>
+            <li><a href="#services">Massage sportif</a></li>
+            <li><a href="#services">Programme bien-être</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="tel:+33600000000">+33 6 00 00 00 00</a></li>
+            <li><a href="mailto:contact@myfrenchphysio.com">contact@myfrenchphysio.com</a></li>
+            <li>Courchevel, Savoie</li>
+            <li>France</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-legal">
+        <p>&copy; {new Date().getFullYear()} My French Physio. Tous droits réservés.</p>
+      </div>
+      <div class="footer-payment">
+        <span>CB, Apple Pay, espèces et cryptomonnaies acceptés</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background: var(--color-dark-blue);
+    padding: 80px 0 0;
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  .footer-top {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 80px;
+    padding-bottom: 60px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .footer-logo {
+    font-family: var(--font-serif);
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--color-white);
+    display: block;
+    margin-bottom: 16px;
+  }
+
+  .footer-tagline {
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  .footer-nav {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+  }
+
+  .footer-col h4 {
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--color-gold);
+    margin-bottom: 20px;
+  }
+
+  .footer-col li {
+    margin-bottom: 10px;
+  }
+
+  .footer-col a {
+    font-size: 0.9375rem;
+    color: rgba(255, 255, 255, 0.6);
+    transition: color var(--transition-fast);
+  }
+
+  .footer-col a:hover {
+    color: var(--color-white);
+  }
+
+  .footer-col li:not(:has(a)) {
+    font-size: 0.9375rem;
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 0;
+  }
+
+  .footer-legal p {
+    font-size: 0.8125rem;
+    color: rgba(255, 255, 255, 0.35);
+  }
+
+  .footer-payment span {
+    font-size: 0.8125rem;
+    color: rgba(255, 255, 255, 0.35);
+  }
+
+  @media (max-width: 768px) {
+    .footer-top {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+
+    .footer-nav {
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+
+    .footer-bottom {
+      flex-direction: column;
+      gap: 12px;
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .footer-nav {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
